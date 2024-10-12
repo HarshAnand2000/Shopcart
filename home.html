@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="overlay">
+
+    <div class="loader flex gap-2 absolute z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div class="div1 w-6 h-24 bg-black"></div>
+        <div class="div2 w-6 h-24 bg-red-600"></div>
+        <div class="div3 w-6 h-24 bg-black"></div>
+    </div>
+
+
+    <div id="homePage ">
+        <!-- navbar -->
+        <nav id="header" class="bg-stone-300 px-28 py-4 flex justify-between w-full items-center mb-24 sticky top-0">
+            <div>
+                <a href="index.html" class="text-3xl tracking-widest font-semibold">Shop Cart</a>
+            </div>
+            <div class="flex gap-6 text-lg">
+                <a href="cart.html">Cart</a>
+                <div id="user">Hi User</div>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <div class="text-center">
+            <h1 class="text-7xl mb-20 tracking-[0.2em] font-semibold">Welcome to Shop Cart</h1>
+            <div class="categories flex justify-evenly mb-12">
+                <a href="productList.html"
+                    class="flex justify-center items-center w-40 h-24 rounded-lg bg-stone-500 text-lg border-2 border-stone-600 shadow-md shadow-stone-700 text-white hover:bg-stone-700 hover:cursor-pointer">
+                    All Products
+                </a>
+
+            </div>
+            <p class="text-2xl">Select a category to start Shopping</p>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

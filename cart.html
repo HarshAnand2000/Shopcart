@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopCart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="overlay">
+
+    <div class="loader flex gap-2 absolute z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div class="div1 w-6 h-24 bg-black"></div>
+        <div class="div2 w-6 h-24 bg-red-600"></div>
+        <div class="div3 w-6 h-24 bg-black"></div>
+    </div>
+
+
+    <div id="cartPage ">
+        <!-- navbar -->
+        <nav id="header" class="bg-stone-300 px-28 py-4 flex justify-between w-full items-center mb-10 sticky top-0">
+            <div>
+                <a href="index.html" class="text-3xl tracking-widest font-semibold">Shop Cart</a>
+            </div>
+            <div class="flex gap-6 text-lg">
+                <a href="cart.html">Cart</a>
+                <div id="user">Hi User</div>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <h1 class="text-5xl font-semibold text-center mb-10">Your Cart</h1>
+        <div id="content" class="px-36 flex gap-[4%]">
+            <div id="order-details" class="basis-[72%] p-6 border-2 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold border-b-2 border-bg-slate-400 pb-4">Order Details</h2>
+            </div>
+            <div id="price-details" class="basis-[24%] h-fit ">
+                <div class="border-2 p-4 rounded-lg shadow-md mb-6">
+                    <h4 class="font-semibold mb-2">Price Details</h4>
+                    <div class="flex justify-between">
+                        <p>Price</p>
+                        <p id="total" class="font-semibold">0$</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Discount</p>
+                        <p id="discount" class="font-semibold">0$</p>
+                    </div>
+                    <div class="flex justify-between mb-1">
+                        <p>Delivery Charges</p>
+                        <p class="font-semibold">FREE</p>
+                    </div>
+                    <div class="flex justify-between border-t-2 py-1">
+                        <p class="text-lg">Total</p>
+                        <p id="discountedTotal" class="font-semibold text-lg">0$</p>
+                    </div>
+                </div>
+                <div class="flex gap-[4%]">
+                    <a href="productList.html"
+                        class="w-[58%] bg-blue-300 py-1.5 rounded-md text-white text-center">Continue
+                        Shopping</a>
+                    <a href="checkout.html"
+                        class="checkout w-[38%] bg-blue-500 py-1.5 rounded-md text-white text-center">Checkout</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

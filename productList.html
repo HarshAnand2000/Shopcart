@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="overlay">
+
+    <div class="loader flex gap-2 absolute z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div class="div1 w-6 h-24 bg-black"></div>
+        <div class="div2 w-6 h-24 bg-red-600"></div>
+        <div class="div3 w-6 h-24 bg-black"></div>
+    </div>
+
+    <div id="productListPage">
+        <nav id="header" class="bg-stone-300 px-28 py-4 flex justify-between w-full items-center mb-10 sticky top-0">
+            <div>
+                <a href="index.html" class="text-3xl tracking-widest font-semibold">Shop Cart</a>
+            </div>
+            <div class="flex gap-6 text-lg">
+                <a href="cart.html">Cart</a>
+                <div id="user">Hi User</div>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <h1 id="heading" class="text-5xl font-semibold text-center mb-6">All Products</h1>
+        <div class="flex px-24 gap-24 pb-6">
+            <div id="filters" class="basis-[20%] sticky top-24 self-start -mt-12 ">
+                <div>
+                    <div class="flex flex-col mb-4">
+                        <label for="search">Search Products</label>
+                        <input id="searchfield" type="text" name="pname" placeholder="Search by name"
+                            class="py-1 px-2 w-[100%] border-2 border-bg-slate-400  rounded-md">
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-semibold mb-2">Categories</h3>
+                        <div id="filtering-categories" class=" flex flex-col">
+                            <!-- will be populated by javascript -->
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">Filter by price</h4>
+                        <div class="flex gap-1 mb-4">
+                            <div class="flex flex-col w-[49%] ">
+                                <select id="min-price" name="min-price" class="border-2 rounded-sm p-[4px]">
+                                    <option value="0">0</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                    <option value="200">200</option>
+                                    <option value="1000">1000</option>
+                                </select>
+                                <label for="min-price" class="mt-1 text-sm">Min Price</label>
+                            </div>
+                            <div class="flex flex-col w-[49%]">
+                                <select id="max-price" name="max-price" class="border-2 rounded-sm p-[4px]">
+                                    <option value="0">0</option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="50">50</option>
+                                    <option value="200">200</option>
+                                    <option selected="true" value="1000">1000</option>
+                                </select>
+                                <label for="max-price" class="mt-1 text-sm">Max Price</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <button id="search"
+                        class="w-full bg-yellow-600 hover:bg-yellow-700 px-6 py-1.5 text-white rounded-lg mb-2 ">Search</button>
+                    <button id="clear"
+                        class="w-full bg-pink-600 hover:bg-pink-700 px-6 py-1.5 text-white rounded-lg">Clear
+                        Filters</button>
+                </div>
+                <div></div>
+            </div>
+            <div id="products" class="flex gap-10 flex-wrap w-full">
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/productList.js"></script>
+</body>
+
+</html>

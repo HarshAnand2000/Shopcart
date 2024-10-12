@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="overlay">
+    <div class="loader flex gap-2 absolute z-10 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div class="div1 w-6 h-24 bg-black"></div>
+        <div class="div2 w-6 h-24 bg-red-600"></div>
+        <div class="div3 w-6 h-24 bg-black"></div>
+    </div>
+
+    <div id="productDetailsPage">
+        <nav id="header" class="bg-stone-300 px-28 py-4 flex justify-between w-full items-center mb-16 sticky top-0">
+            <div>
+                <a href="index.html" class="text-3xl tracking-widest font-semibold">Shop Cart</a>
+            </div>
+            <div class="flex gap-6 text-lg">
+                <a href="cart.html">Cart</a>
+                <div id="user">Hi User</div>
+                <a href="index.html">Logout</a>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <div id="product-details-wrapper" class="flex gap-20 px-28">
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/productDetails.js"></script>
+</body>
+
+</html>
